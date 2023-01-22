@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"context"
 	"encoding/binary"
 	"errors"
 	"fmt"
@@ -128,12 +129,32 @@ func connect(reader *bufio.Reader, conn net.Conn) (err error) {
 		return fmt.Errorf("read port failed:%w", err)
 	}
 	port := binary.BigEndian.Uint16(buf[:2])
+
+	dest, err := net.Dial("tcp", fmt.Sprintf("%v:%v", addr, port))
+	if err != nil {
+		return fmt.Errorf("dial dst failed:%w", err)
+	}
+	defer dest.Close()
+
 	log.Println("dial", addr, port)
 
 	_, err = conn.Write([]byte{0x05, 0x00, 0x00, 0x01, 0, 0, 0, 0, 0, 0})
 	if err != nil {
 		return fmt.Errorf("write failed:%w", err)
 	}
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+	go func() {
+		_, _ = io.Copy(dest, reader)
+		cancel()
+	}()
+	go func() {
+		_, _ = io.Copy(conn, dest)
+		cancel()
+	}()
+
+	<-ctx.Done()
+
 	return nil
 
 }
