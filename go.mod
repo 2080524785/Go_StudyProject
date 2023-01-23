@@ -2,6 +2,8 @@ module Go_study
 
 go 1.19
 
+require github.com/stretchr/testify v1.8.1
+
 require (
 	9fans.net/go v0.0.0-20181112161441-237454027057 // indirect
 	github.com/acroca/go-symbols v0.1.1 // indirect
@@ -10,6 +12,7 @@ require (
 	github.com/cosiner/argv v0.1.0 // indirect
 	github.com/cpuguy83/go-md2man/v2 v2.0.0 // indirect
 	github.com/cweill/gotests v1.6.0 // indirect
+	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/davidrjenni/reftools v0.0.0-20210213085015-40322ffdc2e4 // indirect
 	github.com/derekparker/trie v0.0.0-20200317170641-1fdf38b7b0e9 // indirect
 	github.com/fatih/camelcase v1.0.0 // indirect
@@ -31,6 +34,7 @@ require (
 	github.com/mattn/go-runewidth v0.0.13 // indirect
 	github.com/mdempsky/gocode v0.0.0-20200405233807-4acdcbdea79d // indirect
 	github.com/pkg/errors v0.8.1 // indirect
+	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/ramya-rao-a/go-outline v0.0.0-20210608161538-9736a4bde949 // indirect
 	github.com/rivo/uniseg v0.2.0 // indirect
 	github.com/rogpeppe/godef v1.1.2 // indirect
@@ -50,4 +54,5 @@ require (
 	golang.org/x/sys v0.4.0 // indirect
 	golang.org/x/tools v0.5.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
+	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
