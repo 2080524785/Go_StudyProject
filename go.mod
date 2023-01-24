@@ -6,6 +6,7 @@ require github.com/stretchr/testify v1.8.1
 
 require (
 	9fans.net/go v0.0.0-20181112161441-237454027057 // indirect
+	bou.ke/monkey v1.0.2
 	github.com/acroca/go-symbols v0.1.1 // indirect
 	github.com/bits-and-blooms/bitset v1.1.10 // indirect
 	github.com/cilium/ebpf v0.7.0 // indirect
