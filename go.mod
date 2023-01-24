@@ -5,9 +5,16 @@ go 1.19
 require github.com/stretchr/testify v1.8.1
 
 require (
+	github.com/awnumar/memcall v0.0.0-20190816154910-db5ea08008a3 // indirect
+	github.com/awnumar/memguard v0.19.1 // indirect
+	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
+)
+
+require (
 	9fans.net/go v0.0.0-20181112161441-237454027057 // indirect
 	bou.ke/monkey v1.0.2
 	github.com/acroca/go-symbols v0.1.1 // indirect
+	github.com/awnumar/fastrand v0.0.0-20210315215012-30ee0990fa2d
 	github.com/bits-and-blooms/bitset v1.1.10 // indirect
 	github.com/cilium/ebpf v0.7.0 // indirect
 	github.com/cosiner/argv v0.1.0 // indirect
