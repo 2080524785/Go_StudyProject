@@ -18,6 +18,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pelletier/go-toml/v2 v2.0.6 // indirect
 	github.com/ugorji/go/codec v1.2.7 // indirect
+	github.com/wolfogre/go-pprof-practice v0.0.0-20220519102209-aa4ca213af99 // indirect
 	golang.org/x/crypto v0.0.0-20211215153901-e495a2d5b3d3 // indirect
 	golang.org/x/net v0.5.0 // indirect
 	golang.org/x/text v0.6.0 // indirect
